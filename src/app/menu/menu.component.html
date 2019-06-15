@@ -1,0 +1,43 @@
+<mat-tab-group mat-align-tabs="center" mat-stretch-tabs>
+        <mat-tab label="Меню">  
+            <mat-grid-list cols="2" gutterSize="2px" >
+                <mat-grid-tile matRipple style="background: #ffdc15d8"  routerLink ="/chatcontact">
+                 <div>
+                    <div class="divIcon"><mat-icon class="menuIcon">assignment_turned_in</mat-icon></div>
+                    <div class="divText">Чек-листы</div>
+                </div>  
+                </mat-grid-tile>
+                <mat-grid-tile matRipple style="background: #43b118c7"  routerLink ="/tasks">
+                    <div>
+                       <div class="divIcon"><mat-icon class="menuIcon">vertical_split</mat-icon></div>
+                       <div class="divText">Задания</div>
+                   </div>  
+                   </mat-grid-tile>
+                  <mat-grid-tile matRipple style="background: #514fa8c7" routerLink ="/filials">
+                      <div>
+                         <div class="divIcon"><mat-icon class="menuIcon">insert_chart</mat-icon></div>
+                         <div class="divText">Аналитика и отчеты</div>
+                     </div>  
+                     </mat-grid-tile>
+                     <mat-grid-tile matRipple style="background: #7b1fa2c7" routerLink ="/chat">
+                        <div>
+                           <div class="divIcon"><mat-icon class="menuIcon">chat</mat-icon></div>
+                           <div class="divText">Чаты</div>
+                       </div>  
+                       </mat-grid-tile>
+                       <mat-grid-tile matRipple style="background: #51dad3c4" routerLink ="/staff">
+                          <div>
+                             <div class="divIcon"><mat-icon class="menuIcon" style="color: cornsilk">pie_chart</mat-icon></div>
+                             <div class="divText">Планирование</div>
+                         </div>  
+                         </mat-grid-tile>
+              </mat-grid-list> </mat-tab>
+        <mat-tab label="Мой магазин" > <app-my-shop></app-my-shop>  </mat-tab>
+        
+    </mat-tab-group>
+    
+
+
+
+
+

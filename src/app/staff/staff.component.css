@@ -1,0 +1,12 @@
+mat-grid-tile{
+    background: rgb(211, 211, 57);
+    border-radius: 10px;
+}
+[mat-fab] {
+    position: fixed;
+    right: 2%;
+    top: 25px;
+    z-index: 4;
+    
+}
+

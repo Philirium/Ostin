@@ -1,0 +1,26 @@
+<div *ngIf= "start">
+<button mat-fab id="backButton" color="accent"  routerLink=""> <mat-icon>keyboard_backspace
+</mat-icon> </button>
+<mat-accordion *ngFor="let task of tasks" >
+  <mat-expansion-panel  
+  (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false" 
+  [expanded]="[task.ready ? false : true]" style="margin: 10px">
+      <mat-expansion-panel-header>
+        <mat-panel-title [ngClass]=" [task.ready ? 'taskReady' : 'taskInProcess']" >
+          {{task.task}}
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Забрать коробку под номером 322 со штанами в нутри</p>
+      <mat-checkbox (click)="taskDoneToggle(task)" checked="{{task.done}}">выполнил!</mat-checkbox>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+    
+
+  
+    
+    
+    

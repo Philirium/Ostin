@@ -1,0 +1,73 @@
+<button mat-fab [matMenuTriggerFor]="menu" color="accent"> 
+    <mat-icon>face</mat-icon>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item><mat-icon>work</mat-icon>Дать этому сотруднику задание </button>
+        <button mat-menu-item><mat-icon>trending_up</mat-icon>Повысить сотрудника</button>
+        <button mat-menu-item><mat-icon>delete</mat-icon>Уволить сотрудника</button>
+        <button mat-menu-item><mat-icon>highlight_off</mat-icon>Лучше вообще не нажимать</button>
+      </mat-menu> 
+</button>
+<button mat-fab id="backButton" color="accent"  routerLink=""> <mat-icon>keyboard_backspace
+  </mat-icon> </button>
+<button mat-fab id="anotherMessage" (click)="anotherMessage()"> <mat-icon>feedback
+  </mat-icon> </button>
+  
+
+<div class="chat-container" >
+  <div class="main-card" >
+    <mat-list class="chat-list" #scrollMe style="overflow: scroll; height: xyz;"  >
+     <div *ngFor="let message of messages" [ngClass]="[message.from === 'me'? 'me' : 'anotherPerson']" >
+        
+      <!-- рендер сообщений -->  
+         <div [ngClass]="[message.from === 'me'? 'messageBox' : 'messageBox2']" 
+             [matMenuTriggerFor]="messageMenu" matRipple>
+             <div class="messageFrom">{{message.name}}</div>
+            {{message.messageContent}} 
+            <mat-menu #messageMenu="matMenu">
+              <button mat-menu-item>Редактировать сообщение </button>
+              <button mat-menu-item>Сохранить в буфер обмена</button>
+              <button mat-menu-item>Удалить</button>
+            </mat-menu> 
+        </div>
+      
+        <!-- рендер новых пользователей в чате -->
+        <!--<p mat-line  class="chat-notification">
+          <span> <b>1</b> joined to the conversation. </span>
+        </p>
+        <p mat-line  class="chat-notification">
+          <span> <b>2</b> is now <b>3</b> </span>
+        </p>
+
+      -->
+
+
+
+      </div>
+    
+    </mat-list>
+    <div class="chat-footer-container">
+    
+      <mat-form-field class="chat-input" [formGroup]="form" #formMessage >
+        <input formControlName="messageContent"
+               matInput
+               #inputMessage 
+               maxlength="140" 
+               placeholder="Введите ваше сообщение" 
+               (keyup.enter)="sendMessage(this.form.value); inputMessage.value = '' ">
+        <mat-hint >{{inputMessage.value.length}}/140</mat-hint>
+        
+        <button id="sendButton" mat-button (click)="sendMessage(this.form.value); inputMessage.value = ''">
+          <mat-icon>send</mat-icon></button>
+        <button id="photoButton" mat-button 
+        [matMenuTriggerFor]="addMenu">
+          <mat-icon>add_circle</mat-icon>
+          <mat-menu #addMenu="matMenu">
+            <button mat-menu-item>Добавить Фотографию </button>
+            <button mat-menu-item>Приложить фаил</button>
+            <button mat-menu-item>Ничего ни прикладывать</button>
+            
+          </mat-menu> </button>
+      </mat-form-field>
+      </div>
+    </div>
+</div>

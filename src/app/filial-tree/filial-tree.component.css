@@ -1,0 +1,7 @@
+[mat-fab] {
+    position: fixed;
+    right: 2%;
+    top: 25px;
+    z-index: 4;
+    
+}

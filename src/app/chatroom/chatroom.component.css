@@ -1,0 +1,120 @@
+[mat-fab] {
+    position: fixed;
+    right: 2%;
+    top: 25px;
+    z-index: 4;
+    
+}
+
+.chat-container {
+    position: fixed;
+    width: 100%; 
+    height: 100%;  
+}
+
+.chat-input {
+    padding-top: 20px;
+    width: 70%; 
+    margin: 5px;
+    
+}
+.chat-list {
+    overflow: scroll;
+    position: fixed;
+    top: 60px;
+    left: 25px;
+    right: 25px;
+    bottom: 120px;
+}
+
+
+
+.main-card {
+    height: 100%;  
+}
+
+.chat-footer-container {
+    position:fixed;
+    bottom:25px;
+    left:25px;
+    right:25px;
+    
+}
+
+.chat-notification {
+    text-align: center;
+}
+
+.me{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin: 10px;
+    width: auto;
+    height: min-content;
+    word-wrap: break-word;
+    margin: 10px;
+    
+    
+    
+    
+    
+}
+.anotherPerson {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin: 10px;
+    width: auto;
+    height: min-content;
+    word-wrap: break-word;
+    
+}
+
+.example-ripple-container {
+    cursor: pointer;
+    
+  
+   
+  }
+
+.messageBox{
+   width: max-content;
+    max-width: 70%;
+    border-radius: 5px;
+    background: #879297;
+    padding: 5px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+    color: rgb(245, 245, 245);
+    
+    
+}
+.messageBox2{
+    width: max-content;
+     max-width: 70%;
+     border-radius: 5px;
+     background: #7b1fa2c7;
+     box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+     padding: 5px;
+        left: 10%;
+ }
+
+.messageFrom {
+    font-weight: bold;
+}
+
+#backButton {
+    right:20%;
+    
+}
+#sendButton{
+    
+    z-index: 1;
+    position: fixed
+}
+#photoButton{
+    position: fixed;
+    z-index: 2;
+    right: 6px;;
+}
+#anotherMessage {
+    right: 38%;
+}

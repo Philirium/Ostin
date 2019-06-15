@@ -1,0 +1,15 @@
+.mat-card2{
+    height: 95%;
+    width: 85%;
+}
+
+
+.mat-card1{
+    height: 90%;
+    width: 93%;
+    border-radius: 5px;
+}
+span{
+    font-weight:bold;
+    color:  #c2185b;
+}
